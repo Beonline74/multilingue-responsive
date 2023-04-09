@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fr-html</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <a href="#">Be online</a>
+            </div>
+            <div class="onglets">
+                <a href="#accueil">Accueil</a>
+                <a href="#tarifs">Tarifs</a>
+                <a href="#infos">Infos</a>
+            <select onchange="window.location.href=this.value"class="lang">
+                <option value="index.html">Français</option>
+                <option value="lang/en/index-en.html">English</option>
+                <option value="lang/de/index-de.html">Deutsch</option>
+            </select>
+        </nav>
+
+        <div class="principale">
+            <h1>Votre site internet personnalisé de A à Z <br> 
+            à petit prix</h1>
+            <h2>avec Be-Online</h2>
+        </div>
+
+   
+   
+    
+</body>
+</html>
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+}
+
+header .navbar{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgb(168, 118, 215);
+
+}
+
+header nav a{
+    color: crimson;
+    margin: 0 5px;
+}
+
+header nav a:hover{
+    color: rgb(36, 4, 113);
+    margin: 0 5px;
+}
+
+.lang{
+    color: crimson;
+    background-color: transparent;
+    border: none;
+}
+
+.lang:hover{
+    color: rgb(36, 4, 113);
+}
+
+header{
+    text-align: center;
+}
