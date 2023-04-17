@@ -1,0 +1,165 @@
+html{
+    scroll-behavior: smooth;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+/* besoin */
+.accueil{
+    text-align: center;
+    color: darkblue;
+    background-color: green;
+}
+
+/*  */
+/*  */
+/* besoin */
+header{
+    width: 100%;
+    height: 70px;
+    background-color: #3a3a3a;
+    display: flex;
+    align-items: center;
+    position: relative;
+    flex-direction: row;
+}
+/* besoin */
+header > a{
+    color: white;
+    margin: 0 15px;
+    font-size: 1.3em;
+}
+/* besoin */
+h1{
+    color: rgb(255, 255, 255);
+}
+
+
+.division{
+    background-color: lightblue;
+    padding: 15px 15%;
+}
+
+/*  */
+
+
+
+.basDePage{
+    height: 50px;
+    background-color: cadetblue;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 30px 8%;
+    justify-content: space-between;
+}
+
+h5{
+    font-size: 1.1em;
+}
+
+
+
+/*  */
+/*  */
+
+
+.basDePage{
+    background-color: pink;
+}
+
+
+
+.cellules{
+    display: flex;
+    margin: 10px 5%;
+    padding: 10px 5%;
+}
+
+.cellules .prix p{
+    text-align: center;
+}
+
+h5{
+    text-align: center;
+    color: white;
+    padding: 10px 10%;
+}
+
+header .icon{
+    display: none;
+}
+
+@media (max-width: 600px){
+    header > a,
+    header button{
+      display: none;
+    }
+
+    header .icon{
+        display: block;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        width: 5% !important;
+        top: 20px;
+        padding: 0 !important;
+        /* transform: translateY(-50%); */
+        cursor: pointer;
+    }
+
+    header.responsive > a{
+        padding: 10px 0;
+
+    }
+
+
+    header.responsive > a,
+    header.responsive .dropdown-1{
+        display: block;
+        /* padding: 10px 0; */
+        width: 100%;
+        /* text-align: left; */
+    }
+
+    header.responsive button{
+        display: block;
+        padding: 10px 0;
+
+    }
+
+    header {
+        flex-direction: column;
+        min-height: 70px;
+        height: 100%;
+        align-items: flex-start;
+        /* ?? */
+
+    }
+
+    header .dropdown-1:hover .content{
+        position: relative;
+        width: 100%;
+        top: 0;
+        /* display: block;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        background-color: white;
+        top: 70px;
+        width: 100%;
+        padding: 10px 15px;
+        box-sizing: border-box;
+        color: black; */
+    }
+
+    
+
+ 
+    
+   
+
+}

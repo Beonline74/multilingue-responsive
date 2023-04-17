@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the countries</title>
+
+<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body>
+    <header id="navbar" class="nav">
+        <a href="index-en.html">Home</a>
+        <a href="France-en.html">France</a>
+        <a href="USA-en.html">USA</a>
+        <a href="Allemagne-en.html">Germany</a>
+        <select onchange="window.location.href=this.value"class="lang">
+            <option value="lang/en/index-en.html">English</option>
+            <option value="index.html">Français</option>
+            <option value="lang/de/index-de.html">Deutsch</option>
+        </select>
+        <!-- <div class="dropdown-1">
+            <button>Onglet3</button>
+            <div class="content">
+                <a href="#">Sous onglet1</a>
+                <a href="#">Sous onglet2</a>
+                <a href="#">Sous onglet3</a>
+            </div>
+        </div> 
+        <a href="#">Onglet4</a>-->
+        <a class="icon" onclick="myFunction()">&#9776;</a>
+    </header>
+
+<section class="accueil">
+    <h1>My favorite country: USA</h1>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="basDePage">
+    <div class="copyrightGauche">
+        <h5>&copy; Tout droits réservés 2023</h5>
+    </div>
+    <div class="développerPar">
+        <h5>développer par Be Online <br>
+        Contact: .....</h5>
+
+    </div>
+
+
+</footer>
+
+
+
+<!-- Mode Responsive Navbar -->
+    <script>
+        function myFunction() {
+            var x = document.getElementById("navbar");
+            if (x.className === "nav") {
+                x.className += " responsive";
+            } else {
+                x.className = "nav";
+            }
+        }
+    </script>
+    
+</body>
+</html>
