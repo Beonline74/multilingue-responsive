@@ -3,163 +3,442 @@ html{
 }
 
 *{
-    margin: 0;
     padding: 0;
-    list-style: none;
+    margin: 0;
+}
+
+body{
+    list-style-type: none;
     text-decoration: none;
 }
-/* besoin */
-.accueil{
-    text-align: center;
-    color: darkblue;
-    background-color: green;
+
+.menu1, .gauche, .millieu, .droite{
+    list-style-type: none;
+    text-decoration: none;
 }
 
-/*  */
-/*  */
-/* besoin */
-header{
-    width: 100%;
-    height: 70px;
-    background-color: #3a3a3a;
-    display: flex;
-    align-items: center;
-    position: relative;
-    flex-direction: row;
+
+p, h1, h2, h3{
+    text-align: center;
 }
-/* besoin */
-header > a{
-    color: white;
-    margin: 0 15px;
-    font-size: 1.3em;
-}
-/* besoin */
+
 h1{
-    color: rgb(255, 255, 255);
+    font-size: large;
 }
 
+/* navbar */
 
-.division{
-    background-color: lightblue;
-    padding: 15px 15%;
+nav{
+    text-decoration: none;
+    list-style-type: none;
+    z-index: 990;
+    overflow: hidden;
+    background: #FFFAE1;
+    position: fixed;
+    width: 100%;
+    opacity: 0.9;
 }
 
-/*  */
-
-
-
-.basDePage{
-    height: 50px;
-    background-color: cadetblue;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 30px 8%;
-    justify-content: space-between;
+header li{
+    float: right;
 }
 
-h5{
-    font-size: 1.1em;
-}
-
-
-
-/*  */
-/*  */
-
-
-.basDePage{
-    background-color: pink;
-}
-
-
-
-.cellules{
-    display: flex;
-    margin: 10px 5%;
-    padding: 10px 5%;
-}
-
-.cellules .prix p{
+header li a{
+    text-decoration: none;
+    display: block;
     text-align: center;
+    padding: 18px 16px;
+    color: red;
 }
 
-h5{
-    text-align: center;
-    color: white;
-    padding: 10px 10%;
+#logo1{
+    font-weight: bold;
+    float: left;
+    color: blue;
 }
 
-header .icon{
+#logo1 a{
+    color: blue;
+}
+
+.menu1 a:hover{
+    background: blue;
+    color: aliceblue;
+}
+
+nav label{
     display: none;
 }
 
-@media (max-width: 600px){
-    header > a,
-    header button{
-      display: none;
-    }
+nav input[type=checkbox]{
+    display: none;
+}
 
-    header .icon{
+nav input[type=checkbox]:checked ~ ul{
+    display: block;
+}
+
+/* Responsive navbar */
+
+@media screen and (max-width: 620px) {
+    nav{
+        display: ;
+    }
+    #logo1{
+        display: none;
+    }
+    .responsive{
         display: block;
-        position: absolute;
-        right: 0;
-        text-align: center;
-        width: 5% !important;
-        top: 20px;
-        padding: 0 !important;
-        /* transform: translateY(-50%); */
+        color: blue;
+        font-weight: bold;
+        background: #FFFAE1;
         cursor: pointer;
+        text-align: center;
+    }   
+    nav ul{
+        display: none;
     }
-
-    header.responsive > a{
+    nav ul li, nav ul li a{
+        width: 100%;
+        text-align: center;
+    }
+    nav ul li a, nav ul li:hover a{
         padding: 10px 0;
-
     }
-
-
-    header.responsive > a,
-    header.responsive .dropdown-1{
-        display: block;
-        /* padding: 10px 0; */
-        width: 100%;
-        /* text-align: left; */
+    header li a{
+        color: red;
     }
+}
 
-    header.responsive button{
-        display: block;
-        padding: 10px 0;
+/* FIN navbar */
 
-    }
 
-    header {
-        flex-direction: column;
-        min-height: 70px;
-        height: 100%;
-        align-items: flex-start;
-        /* ?? */
+/* carousel */
 
-    }
+.mySlides{
+    display: none;
+}
 
-    header .dropdown-1:hover .content{
-        position: relative;
-        width: 100%;
-        top: 0;
-        /* display: block;
-        display: flex;
-        flex-direction: column;
-        position: relative;
-        background-color: white;
-        top: 70px;
-        width: 100%;
-        padding: 10px 15px;
-        box-sizing: border-box;
-        color: black; */
-    }
+img{
+    vertical-align: middle;
+}
 
-    
+.slideshow-container{
+    max-width: 80%;
+    position: relative;
+    margin: auto;
+}
 
- 
-    
+.prev, .next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
    
+}
+
+.prev:hover, .next:hover{
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.text{
+    color: black;
+    font-weight: 1rem;
+    f ont-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    bottom: 8px;
+}
+.numbertext{
+    color: white;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+.dot{
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background: gray;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, .dot:hover{
+    background: #717171;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+    from {opacity:  .4}
+    to(opacity: 1)
+}
+@keyframes fade {
+    from {opacity:  .4}
+    to(opacity: 1)
+}
+
+/* Responsive carousel */
+
+@media only screen and (max-width:300px) {
+    .prev, .next, .text{
+        font-size: 11px;        
+    }
+    .dot{
+        height: 10px;
+        width: 10px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .prev, .next, .text{
+        font-size: 14px;        
+    }
+}
+
+/* FIN carousel */
+
+/* introduction */
+
+.introduction, .discuter, .pourQui{
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+}
+
+/* Responsive introduction */
+
+@media screen and (max-width: 650px) {
+    p{
+        font-size: large;
+    }
+}
+
+/* FIN introduction */
+
+/* Vignette x 3 pour le responsive */
+
+.flexboxV{
+    background: rgba(255, 235, 205, 0.774);
+    border: 4px solid lightblue ;
+    border-radius: 10px;
+    text-align: center; /* centrer horizontalement */
+    min-height: 150px;
+    margin: 20px;
+}
+
+/* SYSTEME Flexbox sert Ã  rÃ©partir EQUITABLEMENT des Ã©lements sur la page */
+
+.flexboxV ul{
+  padding: 0;
+  display: flex; /* align les Ã©lÃ©ments de la verticale Ã  l'horizontale */
+  justify-content: space-around; /*  rÃ©parti Ã©quitablement des Ã©lements sur la page */
+}
+
+.flexboxV li{
+    height: 160px;
+    width: 160px;
+    margin: 10px;
+    background: rgba(64, 224, 208, 0.825);
+
+    /* centrer un unique Ã©lÃ©ment verticalement et horizontalement */
+    display: flex;
+    justify-content: center; /* centrer horizontalement */
+    align-items: center; /* centrer verticalement  */
+}
+
+.vignette{
+    display: flex;
+    flex-direction: column;
+}
+
+.vignette img{
+    border-radius: 10px;
+}
+
+/* Responsive Vignette x 3 pour le responsive */
+
+@media screen and (max-width: 650px) {
+    h1{
+        font-size: 10vw;
+    }
+
+    .flexboxV ul{
+        flex-direction: column;
+        align-items: center;
+    }
 
 }
+
+/* FIN Vignette x 3 pour le responsive */
+
+/* vignettes formules et prix */
+
+.flexboxTarif ul{
+    display: flex;
+    justify-content: space-around;
+    background: rgba(173, 216, 230, 0.795);
+    margin: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+.flexbox li{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    padding: 10px auto;
+    margin: 20px auto;
+}
+
+.gauche{
+    background: blueviolet;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.millieu{
+    background: yellowgreen;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.droite{
+    background: orange;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+/* Responsive vignettes formules et prix */
+
+@media screen and (max-width: 650px) {
+    h1{
+        font-size: 10vw;
+    }
+
+    .flexboxTarif ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+/* FIN vignettes formules et prix */
+
+/* flexboxCarte */
+
+.flexboxC{
+    width: 90%;
+    display: flex;
+    margin: 0 auto;
+    border: 1px solid green;
+  
+    
+}
+
+.flexboxC ul{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    background: beige;
+    padding: 0 20px;
+    margin: 20px;
+}
+
+h2{
+    text-align: center;
+}
+
+.flexboxC li{
+    border: 1px solid red;
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    p adding: 10px auto;
+    m argin: 20px auto;
+}
+
+/* Responsive flexboxCarte */
+
+@media screen and (max-width: 990px) {
+    .flexboxC{
+        width: 95%;       
+    }
+    .carte{
+        width: 300px;
+        height: 300px;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    
+    .flexboxC ul{
+        flex-direction: column;
+        align-items: center;
+        margin: 20px;
+    }
+    
+}
+
+/* FIN flexboxCarte */
+
+/* footer */
+
+.flexboxF ul{
+    display: flex;
+    justify-content: space-around;
+    background: black;
+}
+
+h2{
+    text-align: center;
+}
+
+.flexboxF li{
+    list-style-type: none;
+    text-decoration: none;
+    color: white;
+    padding: 10px auto;
+    margin: 20px auto;
+}
+
+/* Responsive footer */
+
+@media screen and (max-width: 610px) {
+    .flexboxF ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    
+}
+
+/* FIN footer */
