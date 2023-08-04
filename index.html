@@ -1,102 +1,217 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>les pays</title>
+    <title>Document</title>
 
 <link rel="stylesheet" href="style.css">
 
 </head>
 <body>
-    <header id="navbar" class="nav">
-        <a href="index.html">Accueil</a>
-        <a href="France-fr.html">France</a>
-        <a href="USA-fr.html">USA</a>
-        <a href="Allemagne-fr.html">Allemagne</a>
-        <select onchange="window.location.href=this.value"class="lang">
-            <option value="index.html">Français</option>
-            <option value="lang/en/index-en.html">English</option>
-            <option value="lang/de/index-de.html">Deutsch</option>
-        </select>
-        <a class="icon" onclick="myFunction()">&#9776;</a>
+
+    <!-- navbar -->
+
+    <header>
+        <nav class="responsive">
+            <label for="responsive" class="responsive"><h1>Mon SiteWeb.com</h1>Menu</label>
+            <input type="checkbox" id="responsive" role="button">
+            <ul>
+                <li id="logo1"><a href="#accueil1"><h1>Votre site internet de A à Z sur mesure 
+                multilingue responsive à partir de 250 € avec Mon SiteWeb <br>
+            <a href="mailto:contact.1776.1989@gmail.com">contact.1776.1989@gmail.com</a> </h1></a></li>
+                <li class="menu1"><a href="En/index.html">English</a></li>
+                <li class="menu1"><a href="#parcours">Mon Parcours</a></li>
+                <li class="menu1"><a href="#tarif">Tarifs</a></li>
+                <li class="menu1"><a href="#accueil">Accueil</a></li>
+           
+            </ul>
+        </nav>
     </header>
-<!-- partie principale -->
-<section class="accueil">
- 
-        <br>
-        <h1>Mes pays favori: accueil</h1>
-        <br>
 
-    <div style="position : relative">
-        <span id="introPays">3 des pays à l'origine de la liberté.... <br>
-        mais pas que .... <br></span>
-        <!-- <span id="introPays">Texte sur une image</span> -->
-        <img src="img/Screen Shot 2023-04-17 at 19.48.48.png" alt="flagS"  >
-    </div> 
-</section>
+    <section id="accueil1"></section>
 
-<!-- <br><br><br><br><br><br><br>
-<div id="container-flex">
-    <div class="carte">
-        1
-    </div>
-    <div class="carte">
-        2
-    </div>
-    <div class="carte">
-        3
-    </div>
-</div> -->
+    <!-- FIN navbar -->
+    <br><br><br><br><br>
+    <!-- carousel -->
 
-
-<h1>titre h1 en section</h1>
-<section>
-   
-</section>
-
-<h2>titre h2 en section</h2>
-<section>
-   
-</section>
-
-
-
-<div>
-    <h1>titre h1 en div</h1><h2>titre h2 en div</h2>
-</div>
-
-<section>
-<div>
-    <h1>titre h1 en section div section</h1>
-    <h2>titre h2 en section div section</h2>
-</div>
-</section>
-
-
-<!-- footer -->
-<footer class="basDePage">
-    <div class="copyrightGauche">
-        <h5>&copy; Tout droits réservés 2023</h5>
-    </div>
-    <div class="développerPar">
-        <h5>développer par Be Online <br>
-        Contact: .....</h5>
-    </div>
-</footer>
-
-<!-- Mode Responsive Navbar -->
-    <script>
-        function myFunction() {
-            var x = document.getElementById("navbar");
-            if (x.className === "nav") {
-                x.className += " responsive";
-            } else {
-                x.className = "nav";
-            }
-        }
-    </script>
+    <div class="slideshow-container">
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">1 / 4</div> -->
+            <img src="media/1er site web.jpg" style="width: 100%" alt="M. Lee qui viens de créer le www.">
+            <div class="text">1989: M. Lee viens de créer le réseau web avec le w w w.</div>
+        </div>
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">2 / 4</div> -->
+            <img src="media/Morse_Telegraph_1837- 1600x1000.jpg" style="width: 100%" alt="Samuel Morth et le télégraphe">
+            <div class="text">1837: Samuel Morth devant le télégraphe</div>
+        </div>
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 4</div> -->
+            <img src="media/firts american flag istockphoto-483588791-1600x1000.jpg" style="width: 100%" alt="photo du 1er drapeau américain">
+            <div class="text">le 1er drapeau de la nouvelle nation américaine</div>
+        </div>
+        <div class="mySlides fade">
+            <!-- <div class="numbertext">3 / 4</div> -->
+            <img src="media/New_amsterdam Henry Hudson 1609- 1600x1000.jpg" style="width: 100%" alt="the ville de la Nouvelle Amsterdam, avant ne devienne New York">
+            <div class="text">1609: Henry hudson découvre une baie qui portera son nom.</div>
+        </div>
     
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    </div>
+    <br>
+    <div style="text-align: center">
+        <span class="dot" onclick="currentSlides(1)"></span>
+        <span class="dot" onclick="currentSlides(2)"></span>
+        <span class="dot" onclick="currentSlides(3)"></span>
+        <span class="dot" onclick="currentSlides(4)"></span>
+
+    </div>
+
+    <!-- FIN carousel -->
+
+    <section id="accueil"></section>
+
+    <!-- introduction -->
+
+    <div class="introduction">
+        <p>Depuis 1989, année à laquelle Monsieur Lee créa le World Wide Web, <br> 
+            Internet ou le web n'a cessé d'évoluer et de s'étendre à tel point  qu'en l'an 2023, la quasi totalité des zones <br>
+        habitées de la planète est couverte par ce réseau, il est donc presque indispensable d'y être visible .
+    </p><br>
+    <h2>Pourquoi choisir Mon SiteWeb?</h2>
+    <p>Vous n'aurez qu'un seul interlocuteur...moi! Si vous n'avez pas le temps pour la composition des textes, <br>
+    je peux m'en charger. <br>Vous aurez un contrôle total sur le prix. <br>
+    Deux solutions s'offrent à vous, soit votre projet est plannifié en fonction de ce dont vous avez besoin, <br>
+    soit vous estimez le budget que vous pouvez y consacrer, ainsi pas de mauvaise surprises.
+    Votre site internet peut démarrer très simplement et évoluer avec le temps.</p>
+
+    <p>Mon Site web propose de base un site web responsive, visible sur la plupart des écrans.</p>
+    <br><br>
+
+  
+    </div>
+
+    <!-- FIN introduction -->
+
+    <!-- Vignette x 3 pour le responsive -->
+
+    <div class="flexboxV">
+        <h2>Compatible sur la pluspart des écrans</h2>
+        <ul>
+            <li class="vignette">Sur téléphone
+                <img src="media/Ondes-le-telephone-portable-est-il-dangereux.jpg" width="80%" alt="téléphone">
+            </li>
+            <li class="vignette">Sur tablette
+                <img src="media/tablette-retouche-photo.jpg" width="80%" alt="tablette">
+            </li>
+            <li class="vignette">Sur ordinateur
+                <img src="media/images.jpg" width="80%" alt="ordinateur">
+            </li>
+        </ul>
+    </div>
+
+    <!-- FIN Vignette x 3 pour le responsive -->
+
+    <!-- "pour qui" -->
+
+    <div class="pourQui">
+
+    <h2>A qui s'adresse Mon SiteWeb?</h2>
+    <p>Que vous soyez un particulier ou un professionnel, une association, une micro-entreprise ou une PME, <br>
+    Mon SiteWeb s'adresse à toute personne ou entreprise qui souhaite maîtriser son budget, tout en ayant <br>
+    un moyen de communication simple et fonctionnel, évolutif et accessible. </p>
+    <br>
+    <h2>Bon à savoir, pour un meilleur référencement, il est plus que conseillé d'avoir <br> 
+    un site web en version française ET anglaise.</h2>
+    <br><br>
+    <p class="discuter">Vous avez un projet? ... <br><br> 
+    <a href="mailto:contact.1776.1989@gmail.com">Souhaitez-vous que l'on en discute?</a></p>
+    </div>
+
+    <!-- FIN "pour qui" -->
+
+    <section id="tarif"></section>
+
+    <!-- vignettes formules et prix -->
+
+     <div class="flexboxTarif">
+        <ul>
+            <li class="gauche"><h2>Formule Light <br> 
+                à partir de 250 €</h2> <br>
+                - une image principale <br>
+                - une adresse email de contact <br>
+                - une carte de localisation</li>
+            <li class="millieu"><h2>Formule bilingue <br>
+                à partir 450 €</h2> <br>
+                - le contenu de votre site <br>
+                en ....</li>
+            <li class="droite"><h2>autre options</h2> <br>
+                se renseigner pour les <br>
+                options supplémentaires</li>
+        </ul>
+
+    <!-- FIN vignettes formules et prix -->
+    
+    <!-- vignettes x 2 map -->
+    <h2>Nous situer (carte à prendre en exemple)</h2>
+    <div class="flexboxC">
+        <ul>
+            <li>
+                <iframe class="carte" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.1957918331684!2d6.702805324436844!3d46.184521494936384!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c1d6a8c5640c1%3A0x70c7c34e0f536584!2sAquatic%20area%20Morzine!5e1!3m2!1sen!2sfr!4v1691048464298!5m2!1sen!2sfr" width="380px" height="380px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+         
+            <li>
+                <iframe class="carte" src="https://www.google.com/maps/embed?pb=!4v1691048760558!6m8!1m7!1sO_t_5WpVx7LYDyIeEl2rRw!2m2!1d46.18410466223309!2d6.704284328822208!3f195.792565014032!4f0!5f0.7820865974627469" width="380px" height="380px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </li>
+        </ul>
+    </div> 
+
+    <!-- FIN vignettes x 2 map -->
+
+    <!-- recrutement -->
+       <!-- parcours -->
+       <h2>Vous recherchez un emploi, ou un stage en entreprise? <br> 
+        peut être que nous en proposons!</h2>
+       <p>offres stagiaire: aucun poste actuellement <br>
+        postes employé: aucun poste actuellement
+       </p>
+       <!-- FIN parcours -->
+    <!-- FIN recrutement -->
+
+    <br><br>
+    <section id="parcours"></section>
+
+    <!-- parcours -->
+    <h2>A propos de moi</h2>
+    <p>A mes débuts, je m'étais tourné dans la construction bois, et l'hiver, le ski alpin,<br> 
+    mais avec le temps et avec le changement climatique, j'ai choisi de me tourner vers le développement web.</p>
+    <!-- FIN parcours -->
+
+    <!-- footer -->
+
+    <footer>
+        <div class="flexboxF">
+            <ul>
+                <!-- <li>Copyrights <br>
+                de ? <br>
+                Mentions légales</li> -->
+                <li>Horaires d'ouverture <br>
+                du Lundi au Vendredi <br>
+                8h-12h 14h-18h <br>
+                Samedi de 9h à 12h <br> 
+                </li>
+                <li>Site internet développé par <br> <br>
+                <a href="mailto:contact.1776.1989@gmail.com">contact.1776.1989@gmail.com</a></li>
+            </ul>
+        </div> 
+    </footer>
+
+    <!-- FIN footer -->
+    
+    <script src="script.js"></script>
 </body>
 </html>
